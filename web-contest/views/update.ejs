@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/update" method="post">
+      <h4>기사 번호: <%= post.id %></h4>
+      <h4>작성자: <%= post.writer %></h4>
+      <h4>
+        <span>제목:</span
+        ><input type="text" name="title" value="`${<%" ="post.body" % />}`/>
+      </h4>
+      <h4>
+        <span>본문:</span
+        ><input type="text" name="body" value="`${<%" ="post.body" % />}`/>
+      </h4>
+      <h4>최종 수정일: <%= post.createAtTime %></h4>
+      <input type="submit" value="수정" />
+    </form>
+  </body>
+</html>

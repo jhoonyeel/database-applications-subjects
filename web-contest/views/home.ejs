@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      <a href="/">[기사 자동 생성]</a><a href="/create">[기사 수동 생성]</a>
+    </h3>
+    <% if (posts) { %>
+    <table border="1">
+      <tr>
+        <th>번호</th>
+        <th>작성자</th>
+        <th>제목</th>
+        <th>작성일</th>
+      </tr>
+      <% for (let post of posts) { %>
+      <tr>
+        <td><%= post.id %></td>
+        <td><%= post.writer %></td>
+        <td><a href=`/update/${<%= post.id %>}`></a><%= post.title %></td>
+        <td><%= post.createAtTime %></td>
+      </tr>
+      <% } %>
+    </table>
+    <% } %>
+  </body>
+</html>

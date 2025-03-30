@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      <span>아이디: <%= result.id %></span>
+    </h3>
+    <h3>
+      <span>이름: <%= result.name %></span>
+    </h3>
+    <h3>
+      <span>전화번호: <%= result.phone %></span>
+    </h3>
+    <h3>
+      <span>이메일: <%= result.email %></span>
+    </h3>
+    <h3>
+      <a href="/list">[전체 목록]</a>
+      <a href="/remove/<%= result.id %>">[연락처 삭제]</a>
+    </h3>
+  </body>
+</html>
